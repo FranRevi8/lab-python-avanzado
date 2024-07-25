@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los videojuegos de mi vida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Los videojuegos de mi vida</h1>
+    <main>
+        <form action="/agregar_juego" method="post">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="salida">Fecha de salida</label>
+            <input type="date" id="salida" name="salida" required>
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+            <button type="submit">Guardar Juego</button>
+        </form>
+        <form action="/listado_juegos" method="POST">
+            <button type="submit">Todos los juegos</button>
+        </form>
+    </main>
+</body>
+</html>

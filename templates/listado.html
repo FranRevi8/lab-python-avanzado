@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Videojuegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Listado de Videojuegos</h1>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Fecha de salida</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for videojuego in videojuegos %}
+                <tr>
+                    <td>{{ videojuego[1] }}</td>
+                    <td>{{ videojuego[2] }}</td>
+                    <td>{{ videojuego[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <a href="{{ '/' }}">Volver a la página ppal</a>
+    </main>
+</body>
+</html>

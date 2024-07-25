@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Videojuego</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Detalle del Videojuego</h1>
+    <main>
+        <div class="game-details">
+            <h2 id="game-title">{{ titulo }}</h2>
+            <p><strong>Fecha de salida:</strong> <span id="game-date">{{ salida }}</span></p>
+            <p><strong>Descripción:</strong> <span id="game-description">{{ descripcion }}</span></p>
+        </div>
+    </main>
+</body>
+</html>
